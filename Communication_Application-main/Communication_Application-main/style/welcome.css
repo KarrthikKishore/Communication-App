@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align closer to the top */
+  height: 90vh;
+  font-family: Arial, sans-serif;
+  margin-top: 50px; /* Add margin to push content up */
+}
+
+.welcome-container {
+  text-align: center;
+  padding-top: 30px; /* Adjust padding to move content slightly up */
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 55px; /* Add more space after the header */
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between paragraphs and buttons */
+}
+
+.small-text {
+  font-size: 20px;
+  margin-bottom: 35px; /* Increase space between text and buttons */
+}
+
+button {
+  margin: 20px; /* Add more space between buttons */
+  padding: 10px 40px; /* Adjust padding for wider buttons */
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  min-width: 150px; /* Set minimum width for buttons */
+}

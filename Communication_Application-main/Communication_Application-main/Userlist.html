@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List</title>
+    <!-- Link to the external CSS stylesheet for styling the user list page -->
+    <script src="js/checkLogin.js"></script>
+    <link rel="stylesheet" href="style/userlist.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar with links to different sections -->
+    <div class="navbar">
+      <a href="Chatlist.html">Group Chat</a>
+      <a href="Userlist.html">Manage Users</a>
+      <a href="Documentlist.html">Manage Documents</a>
+      <a href="logout.html">Logout</a>
+    </div>
+
+    <!-- Main content area displaying the list of users -->
+    <div class="content">
+      <h1>Users</h1>
+      <!-- Table to display user information -->
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>User Email ID</th>
+            <th></th> <!-- Empty header for action buttons (Edit/Delete) -->
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody> <!-- Body where user rows will be populated -->
+      </table>
+    </div>
+
+    <!-- Link to the external JavaScript file for managing user list functionality -->
+    <script src="js/userlist.js"></script>
+  </body>
+</html>

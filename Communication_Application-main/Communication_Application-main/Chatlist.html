@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Chat</title>
+    <link rel="stylesheet" type="text/css" href="style/ChatList.css" />
+    <script src="js/checkLogin.js"></script>
+    <script src="js/ChatList.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="Chatlist.html">Group Chat</a>
+      <a href="Userlist.html">Manage Users</a>
+      <a href="Documentlist.html">Manage Documents</a>
+      <a href="logout.html">Logout</a>
+    </div>
+
+    <!-- Group Chat Window -->
+    <div class="chat-window">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <h2>Group Chat</h2>
+        <button class="close-btn" onclick="closeChat()">✖</button>
+      </div>
+
+      <!-- Chat Messages Section -->
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <!-- Chat Input Bar -->
+      <div class="chat-input-bar">
+        <span id="currentUser"></span> <!-- Displaying current logged-in user -->
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message here..."
+        />
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="refreshPage()">Refresh</button>
+      </div>
+    </div>
+  </body>
+</html>

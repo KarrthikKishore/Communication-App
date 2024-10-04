@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Documents</title>
+    <link rel="stylesheet" type="text/css" href="style/DocumentList.css" />
+    <script src="js/checkLogin.js"></script>
+    <script src="js/DocumentList.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="Chatlist.html">Group Chat</a>
+      <a href="Userlist.html">Manage Users</a>
+      <a href="Documentlist.html">Manage Documents</a>
+      <a href="logout.html">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>My Uploads</h1>
+
+      <!-- Table to display uploaded files -->
+      <table>
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>File Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="uploadsTable">
+          <!-- Rows will be dynamically generated -->
+        </tbody>
+      </table>
+
+      <!-- Add Upload button -->
+      <button class="add-upload-btn" onclick="openUploadModal()">
+        + Add Upload
+      </button>
+    </div>
+
+    <!-- Modal for uploading a new file -->
+    <div class="modal" id="uploadModal">
+      <div class="modal-content">
+        <h2>Upload File</h2>
+        <label for="fileLabel">File Description</label>
+        <input
+          type="text"
+          id="fileLabel"
+          placeholder="Enter file description"
+        />
+        <input
+          type="file"
+          id="fileInput"
+          onchange="displayFileName()"
+          style="display: none"
+        />
+        <button onclick="document.getElementById('fileInput').click()">
+          Choose File
+        </button>
+        <span
+          id="fileNameDisplay"
+          style="display: block; margin-top: 10px"
+        ></span>
+        <button class="save-btn" onclick="addUpload()">Upload Now</button>
+        <button class="cancel-btn" onclick="closeUploadModal()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for editing file label -->
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <h2>Edit File Description</h2>
+        <label for="editLabel">File Description</label>
+        <input type="text" id="editLabel" />
+        <button class="save-btn" onclick="saveEdit()">Save</button>
+        <button class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for confirming delete -->
+    <div class="modal" id="deleteModal">
+      <div class="modal-content">
+        <h2>Are you sure?</h2>
+        <p>Do you really want to delete this file?</p>
+        <button class="save-btn" onclick="deleteUpload()">Yes, Delete</button>
+        <button class="cancel-btn" onclick="closeDeleteModal()">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
